@@ -1,7 +1,7 @@
 library(data.table)
 
 # Leer el dataset
-dt <- fread("./datasets/kaggle_competencia_02_muestra.csv")
+dt <- fread("./datasets/competencia_02_crudo.csv.gz")
 
 # Armo listado de las fotos-meses que sean únicos
 listado_meses <- sort(unique(dt$foto_mes))
@@ -44,4 +44,4 @@ proporciones <- dt[, .N, by = clase_ternaria][, .(clase_ternaria, porcentaje = r
 print(proporciones)
 
 # Exporto el dataset a un nuevo archivo CSV para la primera entrega
-fwrite(dt, "competencia_01.csv")
+fwrite(dt, "./datasets/competencia_02.csv")

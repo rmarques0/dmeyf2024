@@ -12,6 +12,7 @@ Este modelo utiliza LightGBM con las siguientes características principales:
 El código fuente se encuentra en `990_workflow_orden227_SEMI.r` dentro de la carpeta competencia_02.
 Entrega: KA-0002 , KA-0002_01_017_r1_11000.csv
 
+ ```
 wf_SEMI_ago_orden227_rm <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea fija
@@ -47,3 +48,4 @@ wf_SEMI_ago_orden227_rm <- function( pnombrewf )
 
   return( exp_wf_end() ) # linea fija
 }
+```

@@ -9,9 +9,14 @@ dir.create("./datasets", showWarnings = FALSE)
 #   destfile = "./datasets/competencia_02_crudo.csv.gz"
 # )
 
+download.file(
+  "https://storage.googleapis.com/open-courses/dmeyf2024-b725/competencia_03_crudo.csv.gz",
+  destfile = "./datasets/competencia_03_crudo.csv.gz"
+)
+
 
 # Leer el dataset
-dt <- fread("./datasets/competencia_02_crudo.csv.gz")
+dt <- fread("./datasets/competencia_03_crudo.csv.gz")
 
 # Crear dataset simple con las columnas necesarias y agregar posición
 dsimple <- dt[, .(
@@ -90,5 +95,5 @@ print(dt[, .(
     Nulos = sum(is.na(clase_ternaria))
 ), by = foto_mes][order(foto_mes)])
 
-# # Exportar el dataset procesado
-# fwrite(dt, "./datasets/competencia_02.csv.gz")
+# Exportar el dataset procesado
+fwrite(dt, "./datasets/competencia_03.csv.gz")

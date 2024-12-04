@@ -1,14 +1,5 @@
 # Linea de Muerte, Tercera Competencia
 
-# Nota Legal
-# Alumnos, de la comision del lunes o del jueves
-# que terminen en el Private Leaderboard por debajo de la ganancia del submit que genera este muy basico script
-# tendran severamente comprometidas sus chances de aprobar la asignatura
-
-# Requerimientos
-# * Este script necesita apenas una virtual machine con **32 GB** de memoria RAM
-# * Corre en una hora y cuarenta
-
 # Inicializacion
 # Establezco Experimento
 
@@ -111,7 +102,7 @@ dataset <- Corregir_Drift(dataset, metodo="UVA")
 
 ################ Modelado ################
 # Training Strategy
-GLOBAL_semilla <- 955841
+GLOBAL_semilla <- 724939
 campos_buenos <- copy(setdiff(colnames(dataset), c("clase_ternaria")))
 set.seed(GLOBAL_semilla, kind = "L'Ecuyer-CMRG")
 dataset[, azar := runif(nrow(dataset))]

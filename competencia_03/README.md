@@ -1,7 +1,7 @@
 # Competencia 03 - Línea de Muerte
 
 ## Envio elejido:
-  - lineademuerte_ca_df_fe_50_s2_12000.csv
+  - lineademuerte_ca_df_fe_50_s2_11000.csv
 
 ## Requerimientos
 * Dependencias: 
